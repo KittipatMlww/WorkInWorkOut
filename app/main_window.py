@@ -3,6 +3,7 @@ from datetime import datetime
 import locale
 from app.employee_list_window import show_employee_list
 from app.issue_card_window import open_issue_card_window
+from app.report_window import show_daily_report
 
 # ตั้งค่าภาษาไทยสำหรับวันที่ (Linux/Mac ใช้ "th_TH.UTF-8", Windows อาจใช้ "Thai_Thailand")
 try:
@@ -48,12 +49,11 @@ def run_app():
     btn2 = tk.Button(
         root,
         text="ออกReport",
+        command=lambda:show_daily_report(root),
         width=18,
         height=4,
         # bg="#28a745",      # พื้นหลังสีเขียว (bootstrap success)
         # fg="white",
-        disabledforeground="#e0e0e0",  # ตัวหนังสือสีเทาเมื่อ disabled
-        state="disabled"
     )
     btn2.grid(row=3, column=1, padx=5, pady=5)
 
