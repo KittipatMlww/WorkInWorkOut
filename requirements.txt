@@ -1,2 +1,3 @@
 pip install tkcalendar
 pip install --upgrade tkcalendar
+pip install pyinstaller
